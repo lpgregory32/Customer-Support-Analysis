@@ -17,7 +17,7 @@ INSERT INTO channel_info (ticket_channel, channel_manager, sla_hours) VALUES
 Select count(`ticket id`)
 from customer_support_tickets;
 
--- Thid query is used to show us the first 10 tickets in the data set 
+-- This query is used to show us the first 10 tickets in the data set 
 Select * from customer_support_tickets
 limit 10;
 
@@ -43,7 +43,7 @@ group by `product purchased`
 order by Ticket_Count DESC
 limit 10;
 
--- This query give us the average customer age
+-- This query gives us the average customer age
 Select avg(`customer age`)
 from customer_support_tickets;
 
@@ -64,7 +64,7 @@ from customer_support_tickets
 group by `Ticket Channel`
 order by AVG_Rating DESC;
 
--- This query is showing each ticket proiorty and ticket status combination and how many tickets are open
+-- This query is showing each ticket priority and ticket status combination and how many tickets are open
 Select `ticket priority`, (`ticket status`), COUNT(*) as Ticket_Count
 from customer_support_tickets
 group by `ticket priority`, `ticket status`
